@@ -10,6 +10,7 @@ public class DataType {
     byte byteNumber = 120;
     long longNumber = 12345678987654321L;
     short shortNumber = -32000;
+
     float decimalNumber = 2.455734895738495738495735873489574385793753984753489759834758947583974973f;
     double doubleNumber = 3.456d;
 
@@ -58,6 +59,11 @@ public static String FOOD = "Cake";
     public static void main(String[] args) {
         int k = 0;
         Integer y = null;
+        System.out.println(k);
+
+        k = 10;
+        System.out.println(k);
+
         
         
         System.out.println(k);
