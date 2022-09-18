@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db29d4fb-b04e-4edd-9627-9fe6dc9b96d7" name="Changes" comment="Helloworld done" />
+    <list default="true" id="db29d4fb-b04e-4edd-9627-9fe6dc9b96d7" name="Changes" comment="Mostly used operators II">
+      <change afterPath="$PROJECT_DIR$/src/OperatorHomework.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -30,7 +40,14 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.OperatorHomework">
+    <configuration name="DataType" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataType" />
+      <module name="java-fundamentals" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HelloWorld" />
       <module name="java-fundamentals" />
@@ -38,8 +55,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Operator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Operator" />
+      <module name="java-fundamentals" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OperatorHomework" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OperatorHomework" />
+      <module name="java-fundamentals" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OperatorHomework" />
+        <item itemvalue="Application.Operator" />
+        <item itemvalue="Application.DataType" />
         <item itemvalue="Application.HelloWorld" />
       </list>
     </recent_temporary>
@@ -77,7 +111,49 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1663173506351</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Helloworld done">
+      <created>1663173819518</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1663173819518</updated>
+    </task>
+    <task id="LOCAL−00006" summary="Helloworld done">
+      <created>1663175167580</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1663175167580</updated>
+    </task>
+    <task id="LOCAL−00007" summary="Added datatype examples">
+      <created>1663178040174</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1663178040174</updated>
+    </task>
+    <task id="LOCAL−00008" summary="Added datatype examples">
+      <created>1663255309685</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1663255309685</updated>
+    </task>
+    <task id="LOCAL−00009" summary="Added operator examples">
+      <created>1663263903372</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1663263903372</updated>
+    </task>
+    <task id="LOCAL−00010" summary="Mostly used operators">
+      <created>1663264196096</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1663264196096</updated>
+    </task>
+    <task id="LOCAL−00011" summary="Mostly used operators II">
+      <created>1663264931162</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1663264931162</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,6 +170,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialized new project" />
     <MESSAGE value="Helloworld done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Helloworld done" />
+    <MESSAGE value="Added datatype examples" />
+    <MESSAGE value="Added operator examples" />
+    <MESSAGE value="Mostly used operators" />
+    <MESSAGE value="Mostly used operators II" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mostly used operators II" />
   </component>
 </project>
