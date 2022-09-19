@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 /**
  * Examples for Java operators
  *
@@ -152,6 +154,8 @@ public class Operator {
         // ==, !=
         // &&, ||
         // ?, :
+
+        // BigDecimal d = BigDecimal.valueOf(t); operations with money
            }
 
 }
