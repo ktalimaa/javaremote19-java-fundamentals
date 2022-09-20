@@ -1,5 +1,5 @@
 /**
- * Homework 3: FizzBuzz one line code
+ * Homework 3: FizzBuzz code in one line
  *
  * @author Kristel Talimaa
  */
