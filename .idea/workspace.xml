@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db29d4fb-b04e-4edd-9627-9fe6dc9b96d7" name="Changes" comment="Homework 3 added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Homework3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homework4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homework4A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homework4B.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,23 +44,23 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Homework3">
-    <configuration name="Homework2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Homework2" />
+  <component name="RunManager" selected="Application.Homework4B">
+    <configuration name="Homework4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Homework4" />
       <module name="java-fundamentals" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Homework3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Homework3" />
+    <configuration name="Homework4A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Homework4A" />
       <module name="java-fundamentals" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Operator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Operator" />
+    <configuration name="Homework4B" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Homework4B" />
       <module name="java-fundamentals" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -81,11 +82,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Homework3" />
+        <item itemvalue="Application.Homework4B" />
         <item itemvalue="Application.Statement" />
         <item itemvalue="Application.OperatorHomework" />
-        <item itemvalue="Application.Operator" />
-        <item itemvalue="Application.Homework2" />
+        <item itemvalue="Application.Homework4A" />
+        <item itemvalue="Application.Homework4" />
       </list>
     </recent_temporary>
   </component>
