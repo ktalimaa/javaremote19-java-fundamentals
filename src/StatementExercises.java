@@ -55,6 +55,8 @@ public class StatementExercises {
         //Solution 2
         // Homework 3: one line solution to FizzBuzz
 
+
+
         }
     }
 
