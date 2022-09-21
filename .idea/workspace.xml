@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db29d4fb-b04e-4edd-9627-9fe6dc9b96d7" name="Changes" comment="Switch homework added">
+    <list default="true" id="db29d4fb-b04e-4edd-9627-9fe6dc9b96d7" name="Changes" comment="Homework 3 added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-fundamentals.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-fundamentals.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Homework2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Homework3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,17 +40,9 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ktali\java-fundamentals\src" />
-    </key>
-  </component>
   <component name="RunManager" selected="Application.Homework3">
     <configuration name="Homework2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Homework2" />
@@ -191,11 +182,11 @@
       <option name="presentableId" value="LOCAL−00014" />
       <updated>1663604963761</updated>
     </task>
-    <task id="LOCAL−00015" summary="Homework branch corrected">
-      <created>1663687576146</created>
+    <task id="LOCAL−00015" summary="Statement exercises added">
+      <created>1663692455174</created>
       <option name="number" value="LOCAL−00015" />
       <option name="presentableId" value="LOCAL−00015" />
-      <updated>1663687576146</updated>
+      <updated>1663692455174</updated>
     </task>
     <option name="localTasksCounter" value="16" />
     <servers />
@@ -220,7 +211,7 @@
     <MESSAGE value="Operator homework added" />
     <MESSAGE value="Mostly used operators II" />
     <MESSAGE value="Statements part I" />
-    <MESSAGE value="Homework branch corrected" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework branch corrected" />
+    <MESSAGE value="Statement exercises added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Statement exercises added" />
   </component>
 </project>
