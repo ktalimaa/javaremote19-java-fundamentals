@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db29d4fb-b04e-4edd-9627-9fe6dc9b96d7" name="Changes" comment="Statement exercises added">
+      <change afterPath="$PROJECT_DIR$/src/Array.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StatementExercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatementExercises.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +43,9 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.StatementExercises">
-    <configuration name="OperatorHomework" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="OperatorHomework" />
+  <component name="RunManager" selected="Application.Array">
+    <configuration name="Array" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Array" />
       <module name="java-fundamentals" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -81,11 +81,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Array" />
         <item itemvalue="Application.StatementExercises" />
         <item itemvalue="Application.TheFizzBuzzProblem" />
         <item itemvalue="Application.StatementExcercises" />
         <item itemvalue="Application.Statement" />
-        <item itemvalue="Application.OperatorHomework" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +188,13 @@
       <option name="presentableId" value="LOCAL−00015" />
       <updated>1663692455174</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL−00016" summary="Homework 3 changed">
+      <created>1663773155458</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1663773155458</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +218,7 @@
     <MESSAGE value="Mostly used operators II" />
     <MESSAGE value="Statements part I" />
     <MESSAGE value="Statement exercises added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Statement exercises added" />
+    <MESSAGE value="Homework 3 changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework 3 changed" />
   </component>
 </project>
