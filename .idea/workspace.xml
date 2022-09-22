@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db29d4fb-b04e-4edd-9627-9fe6dc9b96d7" name="Changes" comment="Homework 3 added">
-      <change afterPath="$PROJECT_DIR$/src/Homework4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Homework4A.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Homework4B.java" afterDir="false" />
+    <list default="true" id="db29d4fb-b04e-4edd-9627-9fe6dc9b96d7" name="Changes" comment="Added homework4, homework4A, homework4B">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Homework3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,9 +81,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Homework4B" />
         <item itemvalue="Application.Statement" />
         <item itemvalue="Application.OperatorHomework" />
+        <item itemvalue="Application.Homework4B" />
         <item itemvalue="Application.Homework4A" />
         <item itemvalue="Application.Homework4" />
       </list>
@@ -189,7 +188,19 @@
       <option name="presentableId" value="LOCAL−00015" />
       <updated>1663692455174</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL−00016" summary="Homework 3 changed">
+      <created>1663773155458</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1663773155458</updated>
+    </task>
+    <task id="LOCAL−00017" summary="Arrays I">
+      <created>1663777905728</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1663777905728</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +224,8 @@
     <MESSAGE value="Mostly used operators II" />
     <MESSAGE value="Statements part I" />
     <MESSAGE value="Statement exercises added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Statement exercises added" />
+    <MESSAGE value="Homework 3 changed" />
+    <MESSAGE value="Arrays I" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrays I" />
   </component>
 </project>

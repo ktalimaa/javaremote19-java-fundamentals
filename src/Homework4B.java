@@ -21,5 +21,5 @@ public class Homework4B {
         for(int i=0; i<x; i++) {
             System.out.println(arr[i] + "");
         }
-    }
+    } // could have use for-loop here
 }
