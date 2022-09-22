@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db29d4fb-b04e-4edd-9627-9fe6dc9b96d7" name="Changes" comment="Homework4, homework4A, homework4B - little changes added">
+    <list default="true" id="db29d4fb-b04e-4edd-9627-9fe6dc9b96d7" name="Changes" comment="Package examples added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Array.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Swap.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +37,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/ktali/java-fundamentals/src/examples"
   }
-}</component>
-  <component name="RunManager" selected="Application.Array">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ktali\java-fundamentals\src\examples" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.PackageExample">
     <configuration name="Array" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Array" />
       <module name="java-fundamentals" />
@@ -51,8 +57,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Statement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Statement" />
+    <configuration name="PackageExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="examples.PackageExample" />
       <module name="java-fundamentals" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -81,11 +87,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PackageExample" />
         <item itemvalue="Application.Array" />
         <item itemvalue="Application.TheFizzBuzzProblem" />
         <item itemvalue="Application.StatementExercises" />
         <item itemvalue="Application.StatementExcercises" />
-        <item itemvalue="Application.Statement" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +206,19 @@
       <option name="presentableId" value="LOCAL−00017" />
       <updated>1663777905728</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL−00018" summary="2D and 3D arrays added">
+      <created>1663865892374</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1663865892374</updated>
+    </task>
+    <task id="LOCAL−00019" summary="Package examples added">
+      <created>1663868767976</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1663868767976</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,6 +244,8 @@
     <MESSAGE value="Statement exercises added" />
     <MESSAGE value="Homework 3 changed" />
     <MESSAGE value="Arrays I" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrays I" />
+    <MESSAGE value="2D and 3D arrays added" />
+    <MESSAGE value="Package examples added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Package examples added" />
   </component>
 </project>
