@@ -1,3 +1,5 @@
+package examples;
+
 public class StatementExercises {
 
     public static void main(String[] args) {

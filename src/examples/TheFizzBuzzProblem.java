@@ -1,3 +1,5 @@
+package examples;
+
 /**
  * The Fizz Buzz Problem
  *

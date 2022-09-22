@@ -1,3 +1,5 @@
+package examples;
+
 /**
  * Write a Java program that swaps two variables
  *

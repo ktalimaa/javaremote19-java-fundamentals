@@ -1,3 +1,5 @@
+package examples;
+
 /**
  * Operator homework
  *
