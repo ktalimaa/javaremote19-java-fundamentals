@@ -7,18 +7,17 @@ public class Homework5B {
     public static void main(String[] args) {
 
         int[] b = {1, 7, 3, 10, 9};
+        int a = 0;
         for (int i = 0; i < b.length; i++) {
-            if (b[i] % 2 != 0) {
-                System.out.print("These are odd numbers: " + b[i] + "\t");
-
-
-                for (int j = 0; j < b.length; j++) {
-                    if (b[j] % 2 == 0) {
-                        System.out.println("These are even numbers: " + b[i] + "\t");
-                    }
-                }
-            }
+            if (b[i] % 2 == 0)
+                a++;
         }
+        System.out.println("Number of even numbers: " + a);
+        System.out.println("Number of odd number: " + (b.length - a));
     }
 }
+
+
+
+
 
