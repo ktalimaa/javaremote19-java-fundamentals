@@ -8,7 +8,7 @@ package Homework6;
 
 import java.util.Arrays;
 
-public class ArrayFinder {
+public class Homework6calculator {
     public String findSecondElement(int[] arrayToCalculate) {
         String result = "";
 
