@@ -51,7 +51,7 @@ public class Statement {
         } else {
             System.out.println("i is invalid");
         }
-
+        //use with multiple conditions ELSE IF, another ELSE is always last
 
 
 

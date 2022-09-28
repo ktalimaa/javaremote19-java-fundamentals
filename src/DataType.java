@@ -6,14 +6,17 @@
 public class DataType {
     //Primitive Data Types
     //Numbers
-    int a = 1;
+
     byte byteNumber = 120;
-    long longNumber = 12345678987654321L;
     short shortNumber = -32000;
+    int a = 1;
+    long longNumber = 12345678987654321L;
 
     float decimalNumber = 2.455734895738495738495735873489574385793753984753489759834758947583974973f;
     double doubleNumber = 3.456d;
 
+    double result2 = doubleNumber + a;
+    //float and double can act like integer but integer cat act like float or double
 
     //Character
     char alpha = 'F';
@@ -36,24 +39,24 @@ public class DataType {
 
     //Non-primitive data types
     String word = "I'm a developer";
-    
+
     Character random = 'u';
-    
+
     Integer number = 5;
-    
+
     Float numberSecond = 2.45f;
-    
+
     Integer randomNumber; // null
 
     // Multi-declaration
-int numberOne, numberTwo, numberThree;
+    int numberOne, numberTwo, numberThree;
 
-String fruit = "apple", vegetable = "pumpkin", cities;
+    String fruit = "apple", vegetable = "pumpkin", cities;
 
-// Scope of class variables
-private static String CAR = "Toyota";
+    // Scope of class variables
+    private static String CAR = "Toyota";
 
-public static String FOOD = "Cake";
+    public static String FOOD = "Cake";
 
 
     public static void main(String[] args) {
@@ -64,8 +67,7 @@ public static String FOOD = "Cake";
         k = 10;
         System.out.println(k);
 
-        
-        
+
         System.out.println(k);
         System.out.println(y);
 
@@ -88,8 +90,6 @@ public static String FOOD = "Cake";
 
 
     }
-
-
 
 
 }

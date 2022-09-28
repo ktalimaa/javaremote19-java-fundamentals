@@ -19,13 +19,13 @@ public class Operator {
 
         //post-decrement
         int y = 0;
-        System.out.println(y--);
-        System.out.println(y);
+        System.out.println(y--); //value is still 0
+        System.out.println(y);  //prints the new value, -1
 
         //pre-decrement
         int j = 10;
-        System.out.println(j);
-        System.out.println(--j);
+        System.out.println(j);   //value is still 10
+        System.out.println(--j); //value is 9
 
         //brackets are the highest priority
         int x = i + (-j); // x = i - j; 2 - 9
@@ -131,9 +131,9 @@ public class Operator {
 
         //Assignment operators
         x = x + y; // both are same
-        x += y;
-        x /= y;
-        x *= y;
+        x += y; // x = x + y
+        x /= y; // x = x / y
+        x *= y; // x = x * y
 
 
         // Ternary operators (?, :) - ? true, : false
