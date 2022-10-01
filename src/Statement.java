@@ -75,58 +75,57 @@ public class Statement {
                 break;      // always put the break here, otherwise it executes all cases even if it is true or false
             case 12:
                 System.out.println("The value is 12");
-                default:
+            default:
                 System.out.println("Default block executed!");
         }
 
         String color = "Red";
-                switch(color) {
-                    case "Red":
-                        System.out.println("I'm Red");
-                        break;
-                    case "white":
-                        System.out.println("I'm white");
-                        break;
+        switch (color) {
+            case "Red":
+                System.out.println("I'm Red");
+                break;
+            case "white":
+                System.out.println("I'm white");
+                break;
         }
 
         int grade = 5;
-                switch (grade) {
-                    case 10: // 5 == 10, false
-                        System.out.println("Super Star!");
-                        break;
-                    case 9:
-                    case 7:
-                        System.out.println("Hm, Not bad!");
-                        break;
-                    case 5: // 5 == 5, true
-                        System.out.println("You passed!");
-                    case 4:
-                        System.out.println("You failed");
-                        break; // it will no go after the break
-                    default:
-                        System.out.println("Invalid grade");
-                }
+        switch (grade) {
+            case 10: // 5 == 10, false
+                System.out.println("Super Star!");
+                break;
+            case 9:
+            case 7:
+                System.out.println("Hm, Not bad!");
+                break;
+            case 5: // 5 == 5, true
+                System.out.println("You passed!");
+            case 4:
+                System.out.println("You failed");
+                break; // it will no go after the break
+            default:
+                System.out.println("Invalid grade");
+        }
 
 
+        //WHILE (Entry-check loop)
+        int money = 0;
 
+        while (money <= 5) {
+            System.out.println("Doing job. Money =" + money);
+            money++; // money = money + 1
+        }
 
-                //WHILE (Entry-check loop)
-                int money = 0;
-
-                while (money <= 5) {
-                    System.out.println("Doing job. Money =" + money);
-                    money++; // money = money + 1
-                }
-
-                // Do-WHILE (Exit-check loop)
+        // Do-WHILE (Exit-check loop)
         do {
             System.out.println("money =" + money);
             money += 10; // money = money + 10
-        } while(money < 100);
+        } while (money < 100);
 
         // FOR
         for (int g = 4; g <= 6; g++) {   // you can change the value, or leave it with ;
             System.out.println("g value is: " + g);
+
         }
     }
 }
