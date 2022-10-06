@@ -10,12 +10,11 @@ package calculator;
 
 public class Add {
     public int addArray(int[] addArray) {
-        int result = 0;
 
+        int result = 0;
         for (int j = 0; j < addArray.length; j++) {
             result = result + addArray[j];
         }
-
         return result;
     }
 }

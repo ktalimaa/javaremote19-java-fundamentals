@@ -11,13 +11,12 @@ import java.util.Scanner;
  */
 
 public class Multiply {
-    public int multiplyArray(int[] multiplyArray) {
-        int result = 0;
+    public int multiplyArray(int[] inputArray) {
 
-        for (int j = 0; j < multiplyArray.length; j++) {
-            result = result * multiplyArray[j];
+        int result = inputArray[0];
+        for (int j = 1; j < inputArray.length; j++) {
+            result *= inputArray[j];
         }
         return result;
-
     }
 }

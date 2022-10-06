@@ -11,11 +11,11 @@ import java.util.Scanner;
  */
 
 public class Subtract {
-    public int subtractArray(int[] subtractArray) {
+    public int subtractArray(int[] inputArray) {
 
-        int result = 0;
-        for (int j = 0; j < subtractArray.length; j++) {
-            result = subtractArray[j];
+        int result = inputArray[0];
+        for (int j = 1; j < inputArray.length; j++) {
+            result -= inputArray[j];
         }
         return result;
     }
