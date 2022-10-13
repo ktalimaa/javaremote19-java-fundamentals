@@ -231,44 +231,44 @@ public class Shopping {
                 if (cart != null) {
                     for (ProductLine product : cart.getProducts()) {
                         if (product != null) {
-                        System.out.println(counter + ". " + product.getProduct().getName() + ". " + product.getQuantity() + product.getPrice());
+                            System.out.println(counter + ". " + product.getProduct().getName() + ". " + product.getQuantity() + product.getPrice());
+                        }
+                        counter++;
                     }
-                    counter++;
-                }
 
-                System.out.println("Total price: " + cart.getTotalPrice());
-                System.out.println("Do you want to go to back to the cart menu?");
-                String errorMessage = "Incorrect answer! Please enter again:";
-                boolean checker = false;
-                boolean answer = false;
+                    System.out.println("Total price: " + cart.getTotalPrice());
+                    System.out.println("Do you want to go to back to the cart menu?");
+                    String errorMessage = "Incorrect answer! Please enter again:";
+                    boolean checker = false;
+                    boolean answer = false;
 
-                do {
-                    if (!scanner.hasNextBoolean()) {
-                        System.out.println(errorMessage);
-                        scanner.next();
-                    } else {
-                        answer = scanner.nextBoolean();
-                        checker = true;
-                    }
-                } while (!checker);
+                    do {
+                        if (!scanner.hasNextBoolean()) {
+                            System.out.println(errorMessage);
+                            scanner.next();
+                        } else {
+                            answer = scanner.nextBoolean();
+                            checker = true;
+                        }
+                    } while (!checker);
 
-                if (answer) {
-                    cartMenu(cart);
-                } else {
-                    boolean isPaid = isPaymentDone();
-
-                    if (isPaid) {
-                        cart = new Cart();
-                        mainMenu(cart);
-                    } else {
+                    if (answer) {
                         cartMenu(cart);
+                    } else {
+                        boolean isPaid = isPaymentDone();
+
+                        if (isPaid) {
+                            cart = new Cart();
+                            mainMenu(cart);
+                        } else {
+                            cartMenu(cart);
+                        }
                     }
+                } else {
+                    System.out.println("Cart is empty!");
+                    System.out.println("Going back to cart menu...");
+                    cartMenu(null);
                 }
-        } else {
-            System.out.println("Cart is empty!");
-            System.out.println("Going back to cart menu...");
-            cartMenu(null);
-        }
                 break;
 
             case 2:     // for the payment
@@ -300,8 +300,6 @@ public class Shopping {
         System.out.println("Do you want to pay?");
         boolean checker = false;
         boolean answer = false;
-
-        System.out.println("Do you want to pay?");
 
         do {
             if (!scanner.hasNextBoolean()) {
