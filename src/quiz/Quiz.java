@@ -30,8 +30,8 @@ import java.util.Scanner;
  * The correct answers:
  * a. Tallin
  * b. ... and so on
- *
- *
+ * <p>
+ * <p>
  * Homework:
  * 1. Display the correct answers for the questions
  * 2. Calculate total score
@@ -51,12 +51,16 @@ public class Quiz {
 
         int totalScore = 0;
         int rightAnswer = 1;
+
         int wrongAnswer = 0;
-        boolean hasPassed = false;
+        int maxPoints = 3;
+
+        boolean hasPassed;
 
         Question[] questions = getRandomQuestions();
         Answer[] userAnswers = new Answer[questions.length];
 
+        // Display questions and options
         for (int j = 0; j < questions.length; j++) {
             Question question = questions[j];
             System.out.println(question.getDescription());
@@ -72,16 +76,16 @@ public class Quiz {
             answer.setQuestionId(question.getId());
             answer.setCorrectOptionIndex(getAnswerOption(question.getOptions().length));
             userAnswers[j] = answer;
-
         }
 
         Answer[] correctAnswers = getAnswers();
 
         // Total score calculation: Compare answerOptions of CorrectAnswers ant the userAnswer
-        for (int i = 0; i < correctAnswers.length; i++) {      // compare each answer
-            for (j = 0, j < userAnswers.length; j++) ;
-            if (correctAnswers[i].getQuestionId() == userAnswers[j].getQuestionId() && correctAnswers[i].getCorrectOptionIndex() == userAnswers[j].getCorrectOptionIndex()) {
-                totalScore += rightAnswer;
+        for (Answer correctAnswer : correctAnswers) {
+            for (Answer userAnswer : userAnswers) {
+                if (correctAnswer.getQuestionId() == userAnswer.getQuestionId() && correctAnswer.getCorrectOptionIndex() == userAnswer.getCorrectOptionIndex()) {
+                    totalScore += rightAnswer;
+                }
             }
         }
 
@@ -90,10 +94,9 @@ public class Quiz {
         // Pass score is 50%
         hasPassed = totalScore >= questions.length / 2;
 
-        System.out.println(hasPassed? "PASSED" : "FAILED");
-
-
+        System.out.println(hasPassed ? "PASSED!" : "FAILED!");
     }
+
 
     private static Question[] getRandomQuestions() {
         Question question1 = new Question();
@@ -109,7 +112,7 @@ public class Quiz {
         Question question3 = new Question();
         question3.setDescription("What is favorite car in Estonia?");
         question3.setId(100002L);
-        question3.setOptions(new String[]{"Skoda", "Audi", "Toyota"});
+        question3.setOptions(new String[]{"Skoda", "Audi", "BMW"});
 
         return new Question[]{question1, question2, question3};
     }
@@ -136,7 +139,7 @@ public class Quiz {
 
     private static int getAnswerOption(int limit) {
         Scanner scanner = new Scanner(System.in);
-        String errorMessage = "Incorrect answer! Please enter again.";
+        String errorMessage = "Incorrect answer! Please enter again:";
         int option = limit + 1;
 
         do {
@@ -154,6 +157,5 @@ public class Quiz {
 
         return option;
     }
-
 
 }
