@@ -5,6 +5,7 @@ import shopping.Product;
 import shopping.ProductLine;
 
 import javax.swing.text.html.Option;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -52,10 +53,7 @@ public class Quiz {
 
         int totalScore = 0;
         int rightAnswer = 1;
-
         int wrongAnswer = 0;
-        int maxPoints = 3;
-
         boolean hasPassed;
 
         Question[] questions = getRandomQuestions();
@@ -75,17 +73,20 @@ public class Quiz {
             // Creating a user answer object and assign it to the userAnswer array
             Answer answer = new Answer();
             answer.setQuestionId(question.getId());
-            answer.setCorrectOptionIndex(getAnswerOption(question.getOptions().length));
+            answer.setCorrectOptionIndex(getAnswerOption(question.getOptions().length - 1));
             userAnswers[j] = answer;
+
+            System.out.println();
         }
 
         Answer[] correctAnswers = getAnswers();
 
         // Total score calculation: Compare answerOptions of CorrectAnswers ant the userAnswer
-        for (Answer correctAnswer : correctAnswers) {
-            for (Answer userAnswer : userAnswers) {
-                if (correctAnswer.getQuestionId() == userAnswer.getQuestionId() && correctAnswer.getCorrectOptionIndex() == userAnswer.getCorrectOptionIndex()) {
-                    totalScore += rightAnswer;
+        for (Answer userAnswer : userAnswers) {
+            for (Answer correctAnswer : correctAnswers) {
+                if (Objects.equals(correctAnswer.getQuestionId(), userAnswer.getQuestionId())) {
+                    totalScore += correctAnswer.getCorrectOptionIndex() == userAnswer.getCorrectOptionIndex() ? rightAnswer : wrongAnswer;
+                    break;
                 }
             }
         }
@@ -93,9 +94,11 @@ public class Quiz {
         System.out.println("Total score: " + totalScore);
 
         // Pass score is 50%
-        hasPassed = totalScore >= questions.length / 2;
+        hasPassed = totalScore >= (double) questions.length / 2;
 
         System.out.println(hasPassed ? "PASSED!" : "FAILED!");
+
+        printCorrectAnswers(questions, correctAnswers);
     }
 
 
@@ -140,7 +143,7 @@ public class Quiz {
 
     private static int getAnswerOption(int limit) {
         Scanner scanner = new Scanner(System.in);
-        String errorMessage = "Incorrect answer! Please enter again:";
+        String errorMessage = "Incorrect option! Please enter again:";
         int option = limit + 1;
 
         do {
@@ -159,164 +162,18 @@ public class Quiz {
         return option;
     }
 
-    private static int displayQuizMenu() {
-        System.out.println("QUIZ MENU \n---------------");
-        System.out.println("1. Show correct answers \n2. Show result \n3. Exit");
-        System.out.println("Choose an option form above:");
+    private static void printCorrectAnswers(Question[] questions, Answer[] correctAnswers) {
+        System.out.println("CORRECT ANSWERS:");
+        for (int i = 0; i < questions.length; i++) {
+            System.out.println((i + 1) + ". " + questions[i].getDescription());
 
-        return getAnswerOption(3);
-    }
-
-    private static Question quizMenu(Question question) {
-        Scanner scanner = new Scanner(System.in);
-        int quizMenuOption = displayQuizMenu();
-
-        switch (quizMenuOption) {
-            case 1:     // display the answers
-                int counter = 1;
-
-                if (question != null) {
-                    for (Answer answer : question.getOptions()) {
-                        if (answer != null) {
-                            System.out.println(counter + ". " + answer.() + answer.getCorrectOptionIndex());
-                        }
-                        counter++;
-                    }
-
-                    System.out.println("Total score: " + getAnswerOption());
-                    System.out.println("Do you want to go to back to the quiz menu?");
-                    String errorMessage = "Incorrect answer! Please enter again:";
-                    boolean checker = false;
-                    boolean answer = false;
-
-                    do {
-                        if (!scanner.hasNextBoolean()) {
-                            System.out.println(errorMessage);
-                            scanner.next();
-                        } else {
-                            answer = scanner.nextBoolean();
-                            checker = true;
-                        }
-                    } while (!checker);
-
-                    if (answer) {
-                        quizMenu(question);
-                    } else {
-                        boolean hasPassed = hasPassedTheTest();
-
-                        if (hasPassed) {
-                            question = new Question();
-                            quizMenu(question);
-                        } else {
-                            quizMenu(question);
-                        }
-                    }
-                } else {
-                    System.out.println("Test is not done!");
-                    System.out.println("Going back to quiz menu...");
-                    quizMenu(null);
+            for (Answer answer : correctAnswers) {
+                if (Objects.equals(questions[i].getId(), answer.getQuestionId())) {
+                    System.out.println("Answer: " + questions[i].getOptions()[answer.getCorrectOptionIndex()]);
+                    break;
                 }
-                break;
-
-            case 2:
-                if (question.getTotalScore() <= 0) {
-                    System.out.println("Test failed! Going back to Quiz menu...");
-                    quizMenu(question);
-                } else {
-                    boolean hasPassed = hasPassedTheTest();
-
-                    if (hasPassed) {
-                        question = new Question();
-                        quizMenu(question);
-                    } else {
-                        quizMenu(question);
-                    }
-                }
-                break;
-
-            case 3:
-                quizMenu(question);
-                break;
-        }
-        return question;
-    }
-
-    private static ProductLine getProductToCart() {
-        System.out.println("QUIZ MENU \n-------------------");
-
-        // To get random products to display
-        Product[] products = getRandomProducts();
-
-        // Displaying the products
-        for (int i = 0; i < products.length; i++) {
-            System.out.println(i + ". " + products[i].getName());
-        }
-
-        System.out.println(products.length + ". " + "Exit to main menu");
-
-        // To get option for product
-        System.out.println("Choose an option from above:");
-        int productChoice = getMenuOption(products.length);
-
-        if (productChoice == products.length) {
-            return null;            // no product has chosen
-        } else {
-            System.out.println("Enter quantity:");
-            Scanner scanner = new Scanner(System.in);
-            float quantity = 0;
-            String errorMessage = "Incorrect quantity! Please enter again:";
-
-            do {
-                if (!scanner.hasNextFloat()) {
-                    System.out.println(errorMessage);
-                    scanner.next();
-                } else {
-                    quantity = scanner.nextFloat();
-
-                    if (quantity <= 0) {
-                        System.out.println(errorMessage);
-                    }
-                }
-            } while (quantity <= 0);
-
-
-            // Price calculation
-            float price = products[productChoice].getPrice() * quantity;
-
-            // Creating product line for cart
-            ProductLine productLine = new ProductLine();
-            productLine.setProduct(products[productChoice]);
-            productLine.setQuantity(quantity);
-            productLine.setPrice(price);
-
-            return productLine;
-        }
-    }
-
-    private static boolean hasPassedTheTest() {
-        Scanner scanner = new Scanner(System.in);
-        String errorMessage = "Incorrect answer! Please enter again:";
-        System.out.println("Do you want to take the test again?");
-        boolean checker = false;
-        boolean answer = false;
-
-        do {
-            if (!scanner.hasNextBoolean()) {
-                System.out.println(errorMessage);
-                scanner.next();
-            } else {
-                answer = scanner.nextBoolean();
-                checker = true;
             }
-        } while (!checker);
-
-        if (answer) {
-            System.out.println("Test passed! Going back to Quiz menu...");
-            return true;
-        } else {
-            System.out.println("Test failed! Going back to Quiz menu...");
-            return false;
+            System.out.println();
         }
     }
-
 }
