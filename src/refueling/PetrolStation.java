@@ -44,43 +44,38 @@ public class PetrolStation {
         diesel2.setPrice(1.996f);
 
         return new Fuel[]{petrol1, petrol2, diesel1, diesel2};
-
     }
-}
-
-/*
-
 
     private static void mainMenu(Cart cart) {
         Scanner scanner = new Scanner(System.in);
-        int mainMenuOption = displayRefuelingMenu();
+        int mainMenuOption = displayMainMenu();
 
         switch (mainMenuOption) {
-            case 1:        // select fuel
-                boolean hasMoreFueling = false;
+            case 1:        // choose fuel
+                boolean hasMoreRefueling = false;
                 int counter = 0;
-                int cartLimit = 1;
+                int fuelLimit = 1;
                 float totalPrice = 0;
-                PetrolProductLine[] fuels = new PetrolProductLine[][ cartLimit];       // it can hold only five products
+                PetrolProductLine[] fuels = new PetrolProductLine[fuelLimit];
 
                 do {
-                    if (counter >= cartLimit) {
-                        System.out.println("Refueling finished, please proceed to pay!"); // here should ask continue or finish and add extra amount if continue
+                    if (counter >= fuelLimit) {
+                        System.out.println("Refueling finished. Please proceed to pay!");
                         break;
                     }
 
-                    PetrolProductLine petrolProductLine = getProductToCart();
+                    PetrolProductLine petrolProductLine = getFuelToCart();
 
                     if (petrolProductLine == null) {
                         mainMenu(cart);
                     } else {
 
-                        fuels[counter] = petrolProductLine;
-                        cart.setProducts(fuels);
+                        fuels[counter] = petrolProductLine;      // if you want to add more fuel, use loop
+                        cart.getProducts(fuels);
                         totalPrice += petrolProductLine.getPrice();
                         cart.setTotalPrice(totalPrice);
 
-                        System.out.println("Do you want to add more fuel?");
+                        System.out.println("Do you want add more fuel?");
                         String errorMessage = "Incorrect answer! Please enter again:";
                         boolean checker = false;
 
@@ -89,16 +84,16 @@ public class PetrolStation {
                                 System.out.println(errorMessage);
                                 scanner.next();
                             } else {
-                                hasMoreFueling = scanner.nextBoolean();
+                                hasMoreRefueling = scanner.nextBoolean();
                                 checker = true;
                             }
                         } while (!checker);
 
-                        if (hasMoreFueling) {
+                        if (hasMoreRefueling) {
                             counter++;
                         }
                     }
-                } while (hasMoreFueling);
+                } while (hasMoreRefueling);
 
                 mainMenu(cart);
                 break;
@@ -107,17 +102,26 @@ public class PetrolStation {
                 cart = cartMenu(cart);
                 break;
 
-            //Exit
             case 3:
-                System.out.println("Thanks for shopping!");
+                System.out.println("Thanks for refueling!");
                 break;
         }
     }
 
-    private static PetrolProductLine getProductToCart() {
+    private static int displayMainMenu() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("MAIN MENU \n-------------------");
+        System.out.println("1. Show fuels \n2. Cart \n3. Exit");
+        System.out.println("Choose an option form above:");
+
+        return getMenuOption(3);
+    }
+
+    private static PetrolProductLine getFuelToCart() {
         System.out.println("MAIN MENU \n-------------------");
 
-        // To get fuels to display
+        // To get random fuels to display
         Fuel[] fuels = getRandomFuels();
 
         // Displaying the fuels
@@ -125,16 +129,16 @@ public class PetrolStation {
             System.out.println(i + ". " + fuels[i].getName());
         }
 
-        System.out.println(fuels.length + ". " + "Exit to main menu.");
+        System.out.println(fuels.length + ". " + "Exit to main menu");
 
         // To get option for fuel
         System.out.println("Choose an option from above:");
         int fuelChoice = getMenuOption(fuels.length);
 
         if (fuelChoice == fuels.length) {
-            return null;            // no product has chosen
+            return null;
         } else {
-            System.out.println("Enter quantity:");
+            System.out.println("Enter quantity (L):");
             Scanner scanner = new Scanner(System.in);
             float quantity = 0;
             String errorMessage = "Incorrect quantity! Please enter again:";
@@ -166,37 +170,6 @@ public class PetrolStation {
         }
     }
 
-    private static int displayRefuelingMenu() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("REFUELING PROCESS\n-------------------");
-        System.out.println("1. Select fuel \n2. Shopping cart/Show added fuel \n3. Exit");
-        System.out.println("Choose an option form above:");
-
-        return getMenuOption(4);
-    }
-
-    private static int getMenuOption(int limit) {
-        Scanner scanner = new Scanner(System.in);
-        String errorMessage = "Incorrect option! Please enter again:";
-        int option = limit + 1;
-
-        do {
-            if (!scanner.hasNextInt()) {
-                System.out.println(errorMessage);
-                scanner.next();
-            } else {
-                option = scanner.nextInt();
-
-                if (option > limit) {
-                    System.out.println(errorMessage);
-                }
-            }
-        } while (option > limit);
-
-        return option;
-    }
-
     private static Cart cartMenu(Cart cart) {
         Scanner scanner = new Scanner(System.in);
         int cartMenuOption = displayCartMenu();
@@ -206,9 +179,9 @@ public class PetrolStation {
                 int counter = 1;
 
                 if (cart != null) {
-                    for (ProductLine product : cart.getProducts()) {
-                        if (product != null) {
-                            System.out.println(counter + ". " + product.getProduct().getName() + ". " + product.getQuantity() + product.getPrice());
+                    for (PetrolProductLine fuel : cart.getProducts()) {
+                        if (fuel != null) {
+                            System.out.println(counter + ". " + fuel.getFuel().getName() + ". " + fuel.getQuantity() + fuel.getPrice());
                         }
                         counter++;
                     }
@@ -271,7 +244,60 @@ public class PetrolStation {
         return cart;
     }
 
+    private static boolean isPaymentDone() {
+        Scanner scanner = new Scanner(System.in);
+        String errorMessage = "Incorrect answer! Please enter again:";
+        System.out.println("Do you want to pay?");
+        boolean checker = false;
+        boolean answer = false;
+
+        do {
+            if (!scanner.hasNextBoolean()) {
+                System.out.println(errorMessage);
+                scanner.next();
+            } else {
+                answer = scanner.nextBoolean();
+                checker = true;
+            }
+        } while (!checker);
+
+        if (answer) {
+            System.out.println("Payment successful! Going back to Main menu...");
+            return true;
+        } else {
+            System.out.println("Payment unsuccessful! Going back to Cart menu...");
+            return false;
+        }
+    }
+
+    private static int displayCartMenu() {
+        System.out.println("CART MENU \n---------------");
+        System.out.println("1. Cart \n2. Pay \n3. Exit to main menu");
+        System.out.println("Choose an option form above:");
+
+        return getMenuOption(3);
+    }
+
+    private static int getMenuOption(int limit) {
+        Scanner scanner = new Scanner(System.in);
+        String errorMessage = "Incorrect option! Please enter again:";
+        int option = limit + 1;
+
+        do {
+            if (!scanner.hasNextInt()) {
+                System.out.println(errorMessage);
+                scanner.next();
+            } else {
+                option = scanner.nextInt();
+
+                if (option > limit) {
+                    System.out.println(errorMessage);
+                }
+            }
+        } while (option > limit);
+
+        return option;
+    }
+
+
 }
-
-
- */
