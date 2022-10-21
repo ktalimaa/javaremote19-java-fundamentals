@@ -1,5 +1,7 @@
 package shopping;
 
+import refueling.PetrolProductLine;
+
 public class Cart {
     private ProductLine[] products;
     private float totalPrice;
@@ -18,5 +20,8 @@ public class Cart {
 
     public void setTotalPrice(float totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public void getProducts(PetrolProductLine[] fuels) {
     }
 }

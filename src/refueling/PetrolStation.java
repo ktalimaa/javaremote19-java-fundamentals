@@ -23,6 +23,8 @@ import java.util.Scanner;
 public class PetrolStation {
     public static void main(String[] args) {
 
+        mainMenu(new Cart());
+
     }
 
     private static Fuel[] getRandomFuels() {
@@ -111,15 +113,15 @@ public class PetrolStation {
     private static int displayMainMenu() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("MAIN MENU \n-------------------");
-        System.out.println("1. Show fuels \n2. Cart \n3. Exit");
+        System.out.println("GAS STATION\n-------------------");
+        System.out.println("1. Select fuel \n2. Cart \n3. Cancel");
         System.out.println("Choose an option form above:");
 
         return getMenuOption(3);
     }
 
     private static PetrolProductLine getFuelToCart() {
-        System.out.println("MAIN MENU \n-------------------");
+        System.out.println("GAS STATION\n-------------------");
 
         // To get random fuels to display
         Fuel[] fuels = getRandomFuels();
@@ -179,9 +181,9 @@ public class PetrolStation {
                 int counter = 1;
 
                 if (cart != null) {
-                    for (PetrolProductLine fuel : cart.getProducts()) {
+                    for (ProductLine fuel : cart.getProducts()) {
                         if (fuel != null) {
-                            System.out.println(counter + ". " + fuel.getFuel().getName() + ". " + fuel.getQuantity() + fuel.getPrice());
+                            System.out.println(counter + ". " + fuel.getProduct().getName() + ". " + fuel.getQuantity() + fuel.getPrice());
                         }
                         counter++;
                     }
@@ -298,6 +300,9 @@ public class PetrolStation {
 
         return option;
     }
+
+
+
 
 
 }
