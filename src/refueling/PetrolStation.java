@@ -69,17 +69,18 @@ public class PetrolStation {
                     PetrolProductLine petrolProductLine = getFuelToCart();
 
                     if (petrolProductLine == null) {
-                        mainMenu(cart);
+                        cartMenu(cart);
                     } else {
 
-                        fuels[counter] = petrolProductLine;      // if you want to add more fuel, use loop
+                        fuels[counter] = petrolProductLine;
                         cart.getProducts(fuels);
                         totalPrice += petrolProductLine.getPrice();
                         cart.setTotalPrice(totalPrice);
 
                         System.out.println("Do you want add more fuel?");
                         String errorMessage = "Incorrect answer! Please enter again:";
-                        boolean checker = false;
+                        boolean checker = true;
+                        boolean answer = false;
 
                         do {
                             if (!scanner.hasNextBoolean()) {
@@ -87,7 +88,7 @@ public class PetrolStation {
                                 scanner.next();
                             } else {
                                 hasMoreRefueling = scanner.nextBoolean();
-                                checker = true;
+                                answer = false;
                             }
                         } while (!checker);
 
@@ -95,9 +96,9 @@ public class PetrolStation {
                             counter++;
                         }
                     }
-                } while (hasMoreRefueling);
+                } while (isPaymentDone());
 
-                mainMenu(cart);
+                cartMenu(cart);
                 break;
 
             case 2:
@@ -177,7 +178,7 @@ public class PetrolStation {
         int cartMenuOption = displayCartMenu();
 
         switch (cartMenuOption) {
-            case 1:     // display the cart
+            case 1:
                 int counter = 1;
 
                 if (cart != null) {
@@ -223,7 +224,7 @@ public class PetrolStation {
                 }
                 break;
 
-            case 2:     // for the payment
+            case 2:
                 if (cart.getTotalPrice() <= 0) {
                     System.out.println("Nothing to pay! Going back to Main menu...");
                     mainMenu(cart);
@@ -232,15 +233,11 @@ public class PetrolStation {
 
                     if (isPaid) {
                         cart = new Cart();
-                        mainMenu(cart);
+                        System.out.println("Payment successful!");
                     } else {
-                        cartMenu(cart);
+                        System.out.println("Payment unsuccessful!");
                     }
                 }
-                break;
-
-            case 3:     // go back to main menu
-                mainMenu(cart);
                 break;
         }
         return cart;
@@ -264,10 +261,10 @@ public class PetrolStation {
         } while (!checker);
 
         if (answer) {
-            System.out.println("Payment successful! Going back to Main menu...");
+            System.out.println("Payment successful!");
             return true;
         } else {
-            System.out.println("Payment unsuccessful! Going back to Cart menu...");
+            System.out.println("Payment unsuccessful!");
             return false;
         }
     }
@@ -300,9 +297,4 @@ public class PetrolStation {
 
         return option;
     }
-
-
-
-
-
 }
