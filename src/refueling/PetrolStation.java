@@ -29,23 +29,11 @@ public class PetrolStation {
 
     private static Fuel[] getRandomFuels() {
 
-        Fuel petrol1 = new Fuel();
-        petrol1.setName("Petrol 98");
-        petrol1.setPrice(1.999f);
+        Fuel petrol = new Fuel();
+        petrol.setName("Petrol 98");
+        petrol.setPrice(1.999f);
 
-        Fuel petrol2 = new Fuel();
-        petrol2.setName("Petrol 95");
-        petrol2.setPrice(1.949f);
-
-        Fuel diesel1 = new Fuel();
-        diesel1.setName("Diesel");
-        diesel1.setPrice(1.989f);
-
-        Fuel diesel2 = new Fuel();
-        diesel2.setName("Diesel miles plus");
-        diesel2.setPrice(1.996f);
-
-        return new Fuel[]{petrol1, petrol2, diesel1, diesel2};
+        return new Fuel[]{petrol};
     }
 
     private static void mainMenu(Cart cart) {
@@ -53,7 +41,7 @@ public class PetrolStation {
         int mainMenuOption = displayMainMenu();
 
         switch (mainMenuOption) {
-            case 1:        // choose fuel
+            case 1:        // add fuel to cart
                 boolean hasMoreRefueling = false;
                 int counter = 0;
                 int fuelLimit = 1;
@@ -92,6 +80,7 @@ public class PetrolStation {
                             }
                         } while (!checker);
 
+
                         if (hasMoreRefueling) {
                             counter++;
                         }
@@ -124,15 +113,15 @@ public class PetrolStation {
     private static PetrolProductLine getFuelToCart() {
         System.out.println("GAS STATION\n-------------------");
 
-        // To get random fuels to display
+        // To get fuel to display
         Fuel[] fuels = getRandomFuels();
 
-        // Displaying the fuels
+        // Displaying the fuel
         for (int i = 0; i < fuels.length; i++) {
             System.out.println(i + ". " + fuels[i].getName());
         }
 
-        System.out.println(fuels.length + ". " + "Exit to main menu");
+        System.out.println(fuels.length + ". " + "Cancel");
 
         // To get option for fuel
         System.out.println("Choose an option from above:");
@@ -297,4 +286,45 @@ public class PetrolStation {
 
         return option;
     }
+
+    private static int displayAdditionalMenu() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("GAS STATION\n-------------------");
+        System.out.println("1. Continue \n2. Go to pay");
+        System.out.println("Choose an option form above:");
+
+        return getMenuOption(2);
+    }
+
+
+
+        /*
+         private static int getAdditionalAmount() {
+          Scanner scanner1 = new Scanner(System.in);
+        int additionalMenuOption = displayAdditionalMenu();
+        System.out.println("Enter quantity (L):");
+        Scanner scanner = new Scanner(System.in);
+        float quantity = 0;
+        String errorMessage = "Incorrect quantity! Please enter again:";
+
+        do {
+            if (!scanner.hasNextFloat()) {
+                System.out.println(errorMessage);
+                scanner.next();
+            } else {
+                quantity = scanner.nextFloat();
+
+                if (quantity <= 0) {
+                    System.out.println(errorMessage);
+                }
+            }
+        } while (quantity <= 0);
+            }
+
+
+
+         */
+
+
 }
