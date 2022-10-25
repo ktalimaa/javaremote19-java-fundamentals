@@ -44,7 +44,7 @@ public class PetrolStation {
         System.out.println("Thanks for fueling!");
         displayCart();
 
-        //payment
+        // Payment
         if (totalAmount > 0) {
             System.out.println("Do you wish to pay now? (true/false)");
 
@@ -56,15 +56,15 @@ public class PetrolStation {
                     System.out.println("Money paid: " + money + CURRENCY);
                     String message = "Thanks for the payment! Visit us again!";
 
-                    if (money == totalAmount) {
+                    if (money == totalAmount) {     // The user paid exactly as much as required.
                         System.out.println(message);
                         isMoneyPaid = true;
-                    } else if (money > totalAmount) {
+                    } else if (money > totalAmount) {       // The user paid too much (cashier should return the rest of the money).
                         double balance = money - totalAmount;
                         System.out.println("Balance returned: " + balance + CURRENCY);
                         System.out.println(message);
                         isMoneyPaid = true;
-                    } else {
+                    } else {  // The user paid too little – should be asked for the rest.
                         System.out.println("The amount is paid is lesser than the total amount! Please pay the correct amount.");
                     }
                 }
